@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.26",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "LearnEditorExtension",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"CoreUObject",
+				"UnrealEd"
+			]
+		},
+		{
+			"Name": "LearnEditorExtensionEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
