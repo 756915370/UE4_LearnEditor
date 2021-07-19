@@ -25,7 +25,7 @@
 - **FExampleDataEditorToolkit** ：自定义资源编辑器实例类，继承自**FAssetEditorToolkit**。这个类里我们需要使用Slate语法创建UI。同时需要实现初始化函数供FExampleDataAssetTypeActions的OpenAssetEditor()方法里调用。
 
 ### 遇到的问题记录
-- **编译失败：declaration of 'TabManager' hides class member**。原因：方法参数名TabManager，和类名或类文件名重复。
+- **编译失败：declaration of 'TabManager' hides class member**。原因：方法参数名TabManager，和父类的成员变量TabManager名称重复。
 - **编译失败：Super': is not a class or namespace name**。原因：Super只有继承自UObject的类才能用，非UObject子类使用**类名::方法名**来进行调用父类方法。可以看到在UObject的源码里用到这个宏：
 ```
 #define DECLARE_CLASS( TClass, TSuperClass, TStaticFlags, TStaticCastFlags, TPackage, TRequiredAPI  ) \
